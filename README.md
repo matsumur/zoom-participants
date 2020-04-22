@@ -17,7 +17,7 @@ Event Typeに以下の4つを設定することです。
 
 ### 動作確認
 - https\://us-central1-[firebaseのプロジェクト名].cloudfunctions.net/participants/get/[ミーティングid]にアクセスすると対応するミーティングIDの入退室記録が **JSONデータ** として出力されます。
-- https\://us-central1-[firebaseのプロジェクト名].cloudfunctions.net/participants/get/[ミーティングid]?type=csvにアクセスすると対応するミーティングIDの入退室記録が **CSVデータ** として出力されます。
+- https\://us-central1-[firebaseのプロジェクト名].cloudfunctions.net/participants/get/[ミーティングid]?type=tsvにアクセスすると対応するミーティングIDの入退室記録が **TSVデータ** として出力されます。
 
 #### データ定義
 ```typescript

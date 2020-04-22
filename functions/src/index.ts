@@ -39,7 +39,7 @@ app.get('/get/:id', (req, res) => {
       }
   }).then(()=>{
     if(req.query.type === "tsv"){
-      res.write("event_type, id,  join_time,  left_time,  user_id,  user_name\n");
+      res.write('"event_type"\t"id"\t"join_time"\t"left_time"\t"user_id"\t"user_name"\n');
       ret.forEach((p) => {
         res.write('"'+ p.event + '"\t"' + p.id + '"\t"' + p.join_time + '"\t"' + p.left_time + '"\t"' + p.user_id + '"\t"' + p.user_name + '"\n');
       });

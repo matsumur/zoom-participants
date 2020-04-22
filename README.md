@@ -51,7 +51,7 @@ export interface Participant{
 
 #### TSVデータ
 ```
-event_type, id,  join_time,  left_time,  user_id,  user_name
+"event_type"  "id"  "join_time" "left_time" "user_id" "user_name"
 "meeting.participant_joined"  "8Bprt_LLL8iSY8cruq-Ew" "2020-04-22T08:53:37Z"     "00000000" "user_name":"Kohei Matsumura"
 "meeting.participant_left"  "8Bprt_LLL8iSY8cruq-Ew"   "2020-04-22T08:58:11Z"  "00000000"  "user_name":"Kohei Matsumura"
 ```

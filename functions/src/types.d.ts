@@ -24,4 +24,5 @@ export interface Participant{
   left_time: Date;
   user_id: string;
   user_name: string;
+  event: string;
 }

@@ -33,14 +33,15 @@ app.get('/get/:id', (req, res) => {
             (log) => log.payload.object.id === req.params.id
           )
           .forEach((flog) => {
+            flog.payload.object.participant.event = flog.event;
             ret.push(flog.payload.object.participant);
           });
       }
   }).then(()=>{
     if(req.query.type === "csv"){
-      res.write("id,  join_time,  left_time,  user_id,  user_name\n");
+      res.write("event_type, id,  join_time,  left_time,  user_id,  user_name\n");
       ret.forEach((p) => {
-        res.write(p.id + ", " + p.join_time + ", " + p.left_time + ", " + p.user_id + ", " + p.user_name + "\n");
+        res.write(p.event + ",  " + p.id + ", " + p.join_time + ", " + p.left_time + ", " + p.user_id + ", " + p.user_name + "\n");
       });
       res.end();
     }else{

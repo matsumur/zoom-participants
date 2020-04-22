@@ -21,7 +21,7 @@ export interface Log {
 export interface Participant{
   id: string;
   join_time: Date;
-  left_time: Date;
+  leave_time: Date;
   user_id: string;
   user_name: string;
   event: string;

@@ -24,7 +24,7 @@ Event Typeに以下の4つを設定することです。
 export interface Participant{
   id: string;
   join_time: Date;
-  left_time: Date;
+  leave_time: Date;
   user_id: string;
   user_name: string;
   event: string;
@@ -41,7 +41,7 @@ export interface Participant{
  "event":"meeting.participant_joined"
  },{
  "id":"8Bprt_LLL8iSY8cruq-Ew",
- "left_time":"2020-04-22T08:58:11Z",
+ "leave_time":"2020-04-22T08:58:11Z",
  "user_id":"00000000",
  "user_name":"Kohei Matsumura",
  "event":"meeting.participant_left"
@@ -51,7 +51,7 @@ export interface Participant{
 
 #### TSVデータ
 ```
-"event_type"  "id"  "join_time" "left_time" "user_id" "user_name"
+"event_type"  "id"  "join_time" "leave_time" "user_id" "user_name"
 "meeting.participant_joined"  "8Bprt_LLL8iSY8cruq-Ew" "2020-04-22T08:53:37Z"     "00000000" "user_name":"Kohei Matsumura"
 "meeting.participant_left"  "8Bprt_LLL8iSY8cruq-Ew"   "2020-04-22T08:58:11Z"  "00000000"  "user_name":"Kohei Matsumura"
 ```
